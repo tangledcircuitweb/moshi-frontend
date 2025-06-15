@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moshi Voice Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Moshi Voice Assistant</h1>
+        
+        <div class="status-container">
+            <div id="connection-status" class="status disconnected">
+                <span class="status-dot"></span>
+                <span class="status-text">Disconnected</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="connect-btn" class="btn primary">
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                Connect
+            </button>
+            
+            <button id="talk-btn" class="btn talk" disabled>
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                    <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                </svg>
+                Push to Talk
+            </button>
+        </div>
+
+        <div class="visualizer">
+            <canvas id="audio-visualizer"></canvas>
+        </div>
+
+        <div class="transcript-container">
+            <h3>Conversation</h3>
+            <div id="transcript" class="transcript"></div>
+        </div>
+
+        <div class="settings">
+            <label>
+                <input type="checkbox" id="auto-speak" checked>
+                Auto-speak responses
+            </label>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
